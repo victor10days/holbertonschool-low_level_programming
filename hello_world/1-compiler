@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Compile the C file without linking
+gcc -c "$CFILE" -o "${CFILE%.c}.o"
+
