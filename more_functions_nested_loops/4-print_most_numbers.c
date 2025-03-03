@@ -1,14 +1,18 @@
+/* 4-print_most_numbers.c - Function to print numbers 0-9 except 2 and 4 */
 #include "main.h"
 
 /**
- * print_most_numbers - Prints numbers 0-9 except 2 and 4, followed by a new line
+ * print_most_numbers - Prints numbers from 0 to 9 except 2 and 4
  */
 void print_most_numbers(void)
 {
-	char numbers[] = "01356789\n";
+    char c;
 
-	char *ptr = numbers;
-	while (*ptr)
-		_putchar(*ptr++);
+    for (c = '0'; c <= '9'; c++)
+    {
+        if (c != '2' && c != '4')
+            _putchar(c);
+    }
+    _putchar('\n');
 }
 
