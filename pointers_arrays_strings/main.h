@@ -2,7 +2,7 @@
 #define MAIN_H
 
 int _putchar(char c);
-char *string_toupper(char *str);
+char *cap_string(char *str);
 
 #endif /* MAIN_H */
 

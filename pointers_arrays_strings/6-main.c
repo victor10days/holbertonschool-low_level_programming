@@ -1,16 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code
+ * main - Tests the cap_string function.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    char *str;
+	char str[] = "expect the best. prepare for the worst. capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+	char *ptr;
 
-    str = "0123456789";
-    puts2(str);
-    return (0);
+	ptr = cap_string(str);
+	printf("%s", ptr);
+	return (0);
 }
 
