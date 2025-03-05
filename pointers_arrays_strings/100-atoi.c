@@ -8,23 +8,25 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, sign = 1, num = 0, found_digit = 0;
+	int i = 0, sign = 1;
+	unsigned int num = 0; /* Use unsigned int to avoid overflow */
 
 	while (s[i] != '\0')
 	{
-		/* Handle sign changes */
 		if (s[i] == '-')
 			sign *= -1;
 
-		/* If it's a digit, process the number */
 		if (s[i] >= '0' && s[i] <= '9')
 		{
+			if (num > 214748364 || (num == 214748364 && s[i] > '7')) /* Check for INT_MAX overflow */
+			{
+				return (sign == 1 ? 2147483647 : -2147483648);
+			}
 			num = num * 10 + (s[i] - '0');
-			found_digit = 1;
 		}
-		/* Stop conversion if a number has been found and a non-digit appears */
-		else if (found_digit)
+		else if (num > 0) /* Stop conversion once a number is found and non-digit appears */
 			break;
+
 		i++;
 	}
 	return (num * sign);

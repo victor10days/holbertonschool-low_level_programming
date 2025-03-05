@@ -18,6 +18,10 @@ int main(void)
     printf("%d\n", nb);
     nb = _atoi("214748364");
     printf("%d\n", nb);
+    nb = _atoi("2147483648"); /* INT_MAX Overflow Test */
+    printf("%d\n", nb);
+    nb = _atoi("-2147483648"); /* INT_MIN Test */
+    printf("%d\n", nb);
     nb = _atoi("0");
     printf("%d\n", nb);
     nb = _atoi("Suite 402");
