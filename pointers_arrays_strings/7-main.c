@@ -1,16 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - check the code
+ * main - Tests the leet function.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    char *str;
+	char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+	char *p;
 
-    str = "0123456789";
-    puts_half(str);
-    return (0);
+	p = leet(s);
+	printf("%s", p);
+	return (0);
 }
 
