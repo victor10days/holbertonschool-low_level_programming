@@ -2,17 +2,26 @@
 #include <stdio.h>
 
 /**
- * main - tests _sqrt_recursion function.
- * Return: 0
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	printf("%d\n", _sqrt_recursion(1));
-	printf("%d\n", _sqrt_recursion(1024));
-	printf("%d\n", _sqrt_recursion(16));
-	printf("%d\n", _sqrt_recursion(17));
-	printf("%d\n", _sqrt_recursion(25));
-	printf("%d\n", _sqrt_recursion(-1));
+	int n;
+
+	n = _sqrt_recursion(1);
+	printf("%d\n", n);
+	n = _sqrt_recursion(1024);
+	printf("%d\n", n);
+	n = _sqrt_recursion(16);
+	printf("%d\n", n);
+	n = _sqrt_recursion(17);
+	printf("%d\n", n);
+	n = _sqrt_recursion(25);
+	printf("%d\n", n);
+	n = _sqrt_recursion(-1);
+	printf("%d\n", n);
 	return (0);
 }
 
