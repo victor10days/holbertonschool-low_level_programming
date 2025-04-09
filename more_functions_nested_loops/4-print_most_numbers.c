@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * print_most_numbers - Prints numbers 0-9 except 2 and 4.
- *
- * Description: This function prints the digits 0 through 9,
- * except for 2 and 4, followed by a new line.
+ * print_most_numbers - print numbers 0 to 9, without 2 and 4
  */
+
 void print_most_numbers(void)
 {
-	char num;
+	int c;
 
-	for (num = '0'; num <= '9'; num++)
+	for (c = 0; c <= 9; c++)
 	{
-		if (num != '2' && num != '4')
-			_putchar(num);
+		if (c != 2 && c != 4)
+		{
+			_putchar(c + '0');
+		}
 	}
 	_putchar('\n');
 }
-

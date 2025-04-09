@@ -1,13 +1,16 @@
 #include "main.h"
 
 /**
- * print_numbers - Prints numbers from 0 to 9 followed by a new line
+ * print_numbers - Printing numbers 0 to 9 followed by new line
  */
+
 void print_numbers(void)
 {
-	char *numbers = "0123456789\n";
+	int c;
 
-	while (*numbers)
-		_putchar(*numbers++);
+	for (c = 0; c <= 9; c++)
+	{
+		_putchar(c + '0');
+	}
+	_putchar('\n');
 }
-

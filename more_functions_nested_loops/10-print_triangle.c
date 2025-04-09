@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * print_triangle - Prints a triangle using the `#` character
- * @size: The size of the triangle
+ * print_triangle - Print a triangle if '#' characters
+ * @size: The size of (height) of th triangle
  *
- * Description: If size is 0 or less, only a new line is printed.
+ * Description: If size is 0 or less, print new line
  */
+
 void print_triangle(int size)
 {
-	int i, j, spaces;
+	int row, space, hash;
 
 	if (size <= 0)
 	{
@@ -16,17 +17,19 @@ void print_triangle(int size)
 		return;
 	}
 
-	for (i = 1; i <= size; i++)
+	for (row = 1; row <= size; row++)
 	{
-		/* Print leading spaces */
-		for (spaces = size - i; spaces > 0; spaces--)
+		for (space = 1; space <= size - row; space++)
+		{
 			_putchar(' ');
+		}
 
-		/* Print hashes */
-		for (j = 0; j < i; j++)
+		for (hash = 1; hash <= row; hash++)
+		{
 			_putchar('#');
+		}
 
 		_putchar('\n');
+
 	}
 }
-

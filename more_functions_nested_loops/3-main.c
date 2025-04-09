@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * main - Entry point to test print_numbers function
+ * main - check the code
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-	print_numbers();
-	return (0);
+    print_numbers();
+    return (0);
 }
-
